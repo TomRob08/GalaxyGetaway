@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
+
+<div class="mx-5">
+    <div class="mt-4 p-5 bg-purple text-white rounded">
+        <div class="text-center">
+            <h1>Welcome</h1>
+        </div>
+        <p>Greetings, Fellow travelers! Step into a realm where the Star Wars universe comes alive. Galactic Getaways
+            invites you to escape to distant planets, experience the thrill of lightsaber duels, savor alien cuisine,
+            and relish the awe-inspiring vistas of a galaxy teeming with wonder. Begin your odyssey now and may the
+            Force guide your travels. Join us for the journey of a lifetime!</p>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center book-section">
+                <h2>Book Your Galactic Adventure</h2>
+                <a class="btn btn-secondary" asp-area="" asp-controller="Book" asp-action="Book">Book Now</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="explore-section">
+                    <h2>Featured Planetary Destinations</h2>
+                    <p>Discover new places and make unforgettable memories.</p>
+                    <a class="btn btn-primary" asp-area="" asp-controller="Explore" asp-action="Explore">Start Exploring</a>
+                </div>
+            </div>
+        </div>
+    </div>
+  <br>
+
