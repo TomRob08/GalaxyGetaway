@@ -1,15 +1,78 @@
-﻿
+﻿@model IEnumerable<string>
+
 @{
     ViewData["Title"] = "Book";
 }
 
-<h1>@ViewData["Title"]</h1>
+<script>
+    document.addEventListener('DOMContentLoaded', e => {
+        $('#input-datalist').autocomplete()
+    }, false);
+</script>
 
-<form method="post" action="">
-Company Name:<br> 
-<input type="text" name="CompanyName" value=""><br>
-Contact Name:<br><br>
-<input type="text" name="ContactName" value=""><br><br>
-<input type="submit" value="Submit" class="submit">
-</form> 
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const dateForm = document.getElementById("bookForm");
+    const date1Input = document.getElementById("dateInput1");
+    const date2Input = document.getElementById("dateInput2");
+
+    dateForm.addEventListener("submit", function (e) {
+      const date1 = new Date(date1Input.value);
+      const date2 = new Date(date2Input.value);
+
+      if (date1 > date2) {
+        alert("Date 1 must come before Date 2.");
+        e.preventDefault(); // Prevent the form from submitting
+      }
+    });
+  });
+</script>
+
+
+<div class="container mt-3">
+    <h1>@ViewData["Title"] your adventure</h1>
+    @using (Html.BeginForm("setSession", "Book", FormMethod.Post, new { id = "bookForm" }))
+    {
+        <label for="browser" class="form-label">Choose your destination:</label>
+        <div class="card p-4 shadow">
+            <div class="input-group mb-3">
+                <div class="form-floating mb-3 mt-3 mx-2 was-validated">
+                    <input type="text" class="form-control" id="destination" placeholder="Enter destination" name="destination" style="border-radius: 22px;" list="list-destinations" required>
+                    <label for="destination">Destination</label>
+                    <datalist id="list-destinations">
+                        @foreach (var planetList in Model)
+                        {
+                            <option>@planetList</option>
+                        }
+                    </datalist>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
+                <div class="form-floating mb-3 mt-3 mx-2 was-validated">
+                    <input type="date" class="form-control mb-2" id="dateInput1" name="dateInput1" style="border-radius: 22px;" required>
+                    <label for="date">Date</label>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
+                <div class="form-floating mb-3 mt-3 mx-2 was-validated">
+                    <input type="date" class="form-control mb-2" id="dateInput2" name="dateInput2" style="border-radius: 22px;" required>
+                    <label for="date">Date</label>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
+                <div class="form-floating mb-3 mt-3 mx-2">
+                    <select class="form-select" id="travelers" name="travelers" style="border-radius: 22px;">
+                        <option value="1">1 Traveler</option>
+                        <option value="2">2 Travelers</option>
+                        <option value="3">3 Travelers</option>
+                        <option value="4">4 Travelers</option>
+                    </select>
+                    <label for="travelers">Travelers</label>
+                </div>
+            </div>
+            <div class="d-grid text-center">
+                    <button type="submit" class="btn btn-secondary btn-block">Submit
+                        <img src="~/images/rocket.png" class="m-1" style="width:30px;"/>
+                    </button>
+            </div>
+        </div>	
+    }
+</div>
 

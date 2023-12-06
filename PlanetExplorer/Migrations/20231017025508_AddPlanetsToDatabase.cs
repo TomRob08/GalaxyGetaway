@@ -43,7 +43,8 @@ namespace PlanetExplorer.Migrations
                                  { "Lothal", "images/planets/Lothal.jpg" },
                                  { "Dagobah", "images/planets/Dagobah.jpg" },
                                  { "Felucia", "images/planets/Felucia.jpg" },
-                                 { "Crait", "images/planets/Crait.png" },};
+                                 { "Crait", "images/planets/Crait.png" },
+                                 { "Dathomir", "images/planets/Dathomir.png" },};
 
             migrationBuilder.InsertData("Planets", columns, values, null);
         }

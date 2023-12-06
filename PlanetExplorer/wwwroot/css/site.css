@@ -1,5 +1,6 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
+    font-family: Helvetica Neue, Helvetica, Arial, and sans-serif !important;
 }
 
 @media (min-width: 768px) {
@@ -23,6 +24,18 @@ body {
 
 .bg-purple {
   background-color: #672df7;
+}
+
+.bg-grey {
+    background-color: #cccccc;
+}
+
+.btn-secondary, .btn-secondary:hover, .btn-secondary:active, .btn-secondary:visited {
+    background-color: #672df7 !important;
+}
+
+.uk-text-primary {
+    color: white !important;
 }
 
 /* palette {

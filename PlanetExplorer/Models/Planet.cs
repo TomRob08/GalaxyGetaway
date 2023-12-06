@@ -15,8 +15,20 @@ namespace PlanetExplorer.Models
 
 		public string? description { get; set; }
 
-		public string? affiliation { get; set; }
+        public int? rotation_period { get; set; }
 
-		public string? fun_facts { get; set; }
-	}
+        public int? orbital_period { get; set; }
+
+        public int? diameter { get; set; }
+
+        public string? climate { get; set; }
+
+        public string? terrain { get; set; }
+
+        public long? population { get; set; }
+
+        public string? affiliation { get; set; }
+
+        public string? fun_facts { get; set; }
+    }
 }

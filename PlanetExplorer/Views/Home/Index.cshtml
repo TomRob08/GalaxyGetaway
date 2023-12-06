@@ -7,7 +7,7 @@
 <div class="mx-5">
     <div class="mt-4 p-5 bg-purple text-white rounded">
         <div class="text-center">
-            <h1>Welcome</h1>
+            <h1 class="uk-text-primary">Welcome</h1>
         </div>
         <p>Greetings, Fellow travelers! Step into a realm where the Star Wars universe comes alive. Galactic Getaways
             invites you to escape to distant planets, experience the thrill of lightsaber duels, savor alien cuisine,
@@ -15,22 +15,19 @@
             Force guide your travels. Join us for the journey of a lifetime!</p>
     </div>
 
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-12 text-center book-section">
-                <h2>Book Your Galactic Adventure</h2>
-                <a class="btn btn-secondary" asp-area="" asp-controller="Book" asp-action="Book">Book Now</a>
+            <div class="col-md-5 mx-2 my-3 flex-fill">
+                <div class="book-section">
+                    <h2 class="uk-text-primary">Book Your Galactic Adventure</h2>
+                    <a class="btn btn-secondary" asp-area="" asp-controller="Book" asp-action="Book">Book Now</a>
+                </div>
             </div>
-        </div>
-    </div>
-
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-5 mx-2 my-3 flex-fill">
                 <div class="explore-section">
-                    <h2>Featured Planetary Destinations</h2>
+                    <h2 class="uk-text-primary">Featured Planetary Destinations</h2>
                     <p>Discover new places and make unforgettable memories.</p>
-                    <a class="btn btn-primary" asp-area="" asp-controller="Explore" asp-action="Explore">Start Exploring</a>
+                    <a class="btn btn-secondary" asp-area="" asp-controller="Explore" asp-action="Explore">Start Exploring</a>
                 </div>
             </div>
         </div>

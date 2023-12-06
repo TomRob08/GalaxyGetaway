@@ -4,7 +4,8 @@
 @inject SignInManager<User> SignInManager
 @inject UserManager<User> UserManager
 
-<ul class="navbar-nav">
+<!-- 
+    <ul class="navbar-nav">
 @if (SignInManager.IsSignedIn(User))
 {
     <li class="nav-item">
@@ -25,4 +26,28 @@ else
         <a class="nav-link text-light" id="register" asp-area="Identity" asp-page="/Account/Register">Register</a>
     </li>
 }
+</ul> 
+-->
+
+<ul class="uk-navbar-nav">
+    @if (SignInManager.IsSignedIn(User))
+    {
+            <li>
+                <a id="manage" class="uk-navbar-item uk-text-primary" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">@UserManager.GetUserName(User)</a>
+            </li>
+            <li>
+                    <form id="logoutForm" class="uk-navbar-item" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                        <button id="logout" type="submit" class="uk-button uk-button-link uk-text-primary">Logout</button>
+                </form>
+            </li>
+    }
+    else
+    {
+            <li>
+                <a class="uk-navbar-item uk-text-primary" id="login" asp-area="Identity" asp-page="/Account/Login">Login</a>
+            </li>
+            <li>
+                <a class="uk-navbar-item uk-text-primary" id="register" asp-area="Identity" asp-page="/Account/Register">Register</a>
+            </li>
+    }
 </ul>

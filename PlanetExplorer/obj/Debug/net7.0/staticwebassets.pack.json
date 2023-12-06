@@ -21,12 +21,32 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "C:\\Users\\Tommy\\Documents\\Programming\\C#\\PlanetExplorer\\wwwroot\\css\\slide.css",
+      "PackagePath": "staticwebassets\\css\\slide.css"
+    },
+    {
       "Id": "C:\\Users\\Tommy\\Documents\\Programming\\C#\\PlanetExplorer\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
       "Id": "C:\\Users\\Tommy\\Documents\\Programming\\C#\\PlanetExplorer\\wwwroot\\images\\home.png",
       "PackagePath": "staticwebassets\\images\\home.png"
+    },
+    {
+      "Id": "C:\\Users\\Tommy\\Documents\\Programming\\C#\\PlanetExplorer\\wwwroot\\images\\hotels\\hothHotel.png",
+      "PackagePath": "staticwebassets\\images\\hotels\\hothHotel.png"
+    },
+    {
+      "Id": "C:\\Users\\Tommy\\Documents\\Programming\\C#\\PlanetExplorer\\wwwroot\\images\\hotels\\tatooineHotel.png",
+      "PackagePath": "staticwebassets\\images\\hotels\\tatooineHotel.png"
+    },
+    {
+      "Id": "C:\\Users\\Tommy\\Documents\\Programming\\C#\\PlanetExplorer\\wwwroot\\images\\hyperspace.jpg",
+      "PackagePath": "staticwebassets\\images\\hyperspace.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Tommy\\Documents\\Programming\\C#\\PlanetExplorer\\wwwroot\\images\\locations\\dreamingRiver.png",
+      "PackagePath": "staticwebassets\\images\\locations\\dreamingRiver.png"
     },
     {
       "Id": "C:\\Users\\Tommy\\Documents\\Programming\\C#\\PlanetExplorer\\wwwroot\\images\\logo.PNG",
@@ -55,6 +75,10 @@
     {
       "Id": "C:\\Users\\Tommy\\Documents\\Programming\\C#\\PlanetExplorer\\wwwroot\\images\\planets\\Dagobah.jpg",
       "PackagePath": "staticwebassets\\images\\planets\\Dagobah.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Tommy\\Documents\\Programming\\C#\\PlanetExplorer\\wwwroot\\images\\planets\\Dathomir.jpg",
+      "PackagePath": "staticwebassets\\images\\planets\\Dathomir.jpg"
     },
     {
       "Id": "C:\\Users\\Tommy\\Documents\\Programming\\C#\\PlanetExplorer\\wwwroot\\images\\planets\\Endor.jpg",
@@ -101,12 +125,20 @@
       "PackagePath": "staticwebassets\\images\\planets\\hoth.jpg"
     },
     {
+      "Id": "C:\\Users\\Tommy\\Documents\\Programming\\C#\\PlanetExplorer\\wwwroot\\images\\rocket.png",
+      "PackagePath": "staticwebassets\\images\\rocket.png"
+    },
+    {
       "Id": "C:\\Users\\Tommy\\Documents\\Programming\\C#\\PlanetExplorer\\wwwroot\\images\\space.png",
       "PackagePath": "staticwebassets\\images\\space.png"
     },
     {
       "Id": "C:\\Users\\Tommy\\Documents\\Programming\\C#\\PlanetExplorer\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\Tommy\\Documents\\Programming\\C#\\PlanetExplorer\\wwwroot\\js\\slide.js",
+      "PackagePath": "staticwebassets\\js\\slide.js"
     },
     {
       "Id": "C:\\Users\\Tommy\\Documents\\Programming\\C#\\PlanetExplorer\\wwwroot\\lib\\bootstrap\\LICENSE",

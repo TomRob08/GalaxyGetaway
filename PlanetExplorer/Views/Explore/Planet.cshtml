@@ -1,15 +1,102 @@
 ﻿@model PlanetExplorer.Models.Planet
 @{
-    ViewData["Title"] = "Planet";
+	ViewData["Title"] = "Planet";
 }
 
+<!-- <link rel="stylesheet" href="~/css/slide.css" asp-append-version="true" />
+<script src="~/js/slide.js"></script> -->
+
 <div class="container mt-3">
-   <img src="~/@Model.planet_image" alt="Planet Image" class="img-fluid rounded" style="width:100%; height: 500px; object-fit: cover;">
+	<img src="~/@Model.planet_image" alt="Planet Image" class="img-fluid rounded" style="width:100%; height: 500px; object-fit: cover;">
 </div>
 
 <div class="container mt-3">
-   <h1 class="display-1">@Model.planet_name</h1>
-   <p>@Model.description</p>
+	<h1 class="display-1">@Model.planet_name</h1>
+	<hr/>
+	<div class="row">
+		<div class="col">
+			<div class="card">
+				<div class="card-header fw-bold">Description</div>
+				<div class="card-body">
+					<p>Rotation period: @Model.rotation_period hours</p>
+					<p>Orbital period: @Model.orbital_period days</p>
+					<p>Diameter: @Model.diameter km</p>
+					<p>Climate: @Model.climate</p>
+					<p>Terrain: @Model.terrain</p>
+					<p>Population: @Model.population</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-sm-9">
+			<p class="fs-5">@Model.description</p>
+		</div>
+	</div>
+
+	<div>
+		<p class="fs-2">Attractions</p>
+		<div class="mt-4 p-5 bg-grey text-black rounded">
+			<div class="uk-slider-container-offset" uk-slider>
+				<div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
+					<ul class="uk-slider-items uk-child-width-1-3@s uk-grid">
+						<li>
+							<div>
+								<div class="uk-card uk-card-default uk-card-hover uk-card-body rounded">
+									<h3 class="uk-card-title">Default</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+								</div>
+							</div>
+						</li>
+
+						<li>
+							<div>
+								<div class="uk-card uk-card-default uk-card-hover uk-card-body rounded">
+									<h3 class="uk-card-title">Default</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+								</div>
+							</div>
+						</li>
+						
+						<li>
+							<div>
+								<div class="uk-card uk-card-default uk-card-hover uk-card-body rounded">
+									<h3 class="uk-card-title">Default</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+								</div>
+							</div>
+						</li>
+						
+						<li>
+							<div>
+								<div class="uk-card uk-card-default uk-card-hover uk-card-body rounded">
+									<h3 class="uk-card-title">Default</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+								</div>
+							</div>
+						</li>
+					</ul>
+					
+					<!-- Arrows -->
+					<a class="uk-position-center-left uk-position-small" href uk-slider-item="previous">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-caret-left-square" viewBox="0 0 16 16">
+							<path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+							<path d="M10.205 12.456A.5.5 0 0 0 10.5 12V4a.5.5 0 0 0-.832-.374l-4.5 4a.5.5 0 0 0 0 .748l4.5 4a.5.5 0 0 0 .537.082z"/>
+						</svg>
+					</a>
+					<a class="uk-position-center-right uk-position-small" href uk-slider-item="next">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-caret-right-square" viewBox="0 0 16 16">
+						<path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+						<path d="M5.795 12.456A.5.5 0 0 1 5.5 12V4a.5.5 0 0 1 .832-.374l4.5 4a.5.5 0 0 1 0 .748l-4.5 4a.5.5 0 0 1-.537.082z"/>
+						</svg>
+					</a>
+				</div>
+				
+				<ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+			</div>
+		</div>
+	</div>
+	<br/>
+	<p>Some information provided by <a href="https://starwars.fandom.com/wiki/Main_Page">Wookiepedia</a></p>
 </div>
 
 

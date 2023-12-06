@@ -19,7 +19,18 @@ builder.Services.AddDbContext<PlanetExplorerContext>(options => options.UseSqlSe
 builder.Services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = false).AddEntityFrameworkStores<PlanetExplorerContext>();
 builder.Services.AddRazorPages();
 
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddMemoryCache();
+
+builder.Services.AddSession(options =>
+{
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+
 var app = builder.Build();
+
+app.UseSession();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

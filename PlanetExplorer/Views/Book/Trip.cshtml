@@ -1,0 +1,20 @@
+﻿@model PlanetExplorer.Models.Planet
+@{
+    ViewData["Title"] = "Trip";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>@Model.planet_name</h1>
+
+<div class="container mt-3">
+    <div class="card">
+        <div class="d-inline-flex">
+            <img class="img-thumbnail img-fluid rounded" src="~/images/hotels/hothHotel.png" alt="Planet image" style="width:auto; height: 200px;">
+            <div class="card-body">
+                <h3>Basic card</h3>
+                <button type="button" class="btn btn-primary float-end">Book</button>
+            </div>
+        </div>
+    </div>
+</div>
+
