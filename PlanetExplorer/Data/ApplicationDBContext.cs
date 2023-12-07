@@ -11,4 +11,6 @@ public class ApplicationDBContext : IdentityDbContext
 	}
 
 	public DbSet<Planet> Planets { get; set; }
+
+	public DbSet<Destinations> Destinations { get; set; }
 }

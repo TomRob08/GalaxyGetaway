@@ -1,20 +1,46 @@
-﻿@model PlanetExplorer.Models.Planet
+﻿@model PlanetExplorer.Models.CombinedViewModel
 @{
     ViewData["Title"] = "Trip";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>@Model.planet_name</h1>
-
 <div class="container mt-3">
-    <div class="card">
+    <h1>@Model.Planet.planet_name</h1>
+    @foreach (var dest in Model.Destinations)
+    {
+    <div class="card my-3 mx-5">
         <div class="d-inline-flex">
             <img class="img-thumbnail img-fluid rounded" src="~/images/hotels/hothHotel.png" alt="Planet image" style="width:auto; height: 200px;">
-            <div class="card-body">
-                <h3>Basic card</h3>
-                <button type="button" class="btn btn-primary float-end">Book</button>
+            <div class="card-body d-flex flex-column">
+                <div class="row">
+                    <div class="col-8">
+                        <h3>@dest.dest_name</h3>
+                        <p>Hello</p>
+                    </div>
+                    <div class="col-4 text-end">
+                        <h3>$50</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-7">
+                        <div class="uk-flex uk-flex-middle">
+                            <div class="uk-margin-small-right" uk-icon="icon: star; ratio: 1"></div>
+                            <div class="uk-margin-small-right" uk-icon="icon: star; ratio: 1"></div>
+                            <div class="uk-margin-small-right" uk-icon="icon: star; ratio: 1"></div>
+                            <div class="uk-margin-small-right" uk-icon="icon: star; ratio: 1"></div>
+                            <div class="uk-margin-small-right" uk-icon="icon: star; ratio: 1"></div>
+                        </div>
+                    </div>
+                    <div class="col-5 text-end">
+                        <a href="#"><h4>Rate this Retreat</h4></a>
+                    </div>
+                </div>
+                <div class="d-grid mt-auto">
+                    <button class="btn btn-secondary btn-block rounded">Experience the Galaxy – Reserve Now</button>
+                </div>
             </div>
         </div>
     </div>
+    }
 </div>
 

@@ -72,16 +72,23 @@ namespace PlanetExplorer.Controllers
         public IActionResult Trip()
         {
             Planet planet = _db.Planets.FirstOrDefault(p => p.planet_name == HttpContext.Session.GetString("dest"));
+            IEnumerable<Destinations> destinations = _db.Destinations.Where(d => d.planet_id == planet.planet_id).ToList();
 
             if (planet == null)
             {
                 return NotFound("Planet not available");
             }
 
+            var viewModel = new CombinedViewModel
+            {
+                Planet = planet,
+                Destinations = destinations
+            };
+
             //Grab entries from the package SQL table using the planet_id
             //Console.WriteLine((string)planet.planet_id);
 
-            return View(planet);
+            return View(viewModel);
         }
     }
 }

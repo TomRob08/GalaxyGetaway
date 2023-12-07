@@ -28,7 +28,7 @@ namespace PlanetExplorer.Controllers
 
 			Planet planet = _db.Planets.FirstOrDefault(p => p.planet_id == id);
 
-			if (planet == null)
+            if (planet == null)
 			{
 				return NotFound("Planet not found");
 			}
